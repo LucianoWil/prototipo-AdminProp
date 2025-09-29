@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AdminProp</title>
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
@@ -22,11 +22,11 @@
     </header>
     <main class="container">
         <div class="image-section">
-            <img src="img/login.jpeg" alt="Personas trabajando en oficina">
+            <img src="{{ url_for('static', filename='img/login.jpeg') }}" alt="Personas trabajando en oficina">
         </div>
         <div class="login-section">
             <h2>Software de gestión de alquileres y administración de pagos</h2>
-            <button class="btn login" id="login-btn"><i class="fa-solid fa-right-to-bracket"></i><a href="views/inicio.html" style="text-decoration: none; color: white;">Iniciar sesión</a></button>
+            <button class="btn login" id="login-btn"><i class="fa-solid fa-right-to-bracket"></i><a href="{{ url_for('login') }}" style="text-decoration: none; color: white;">Iniciar sesión</a></button>
             <button class="btn register" id="register-btn"><i class="fa-solid fa-pen"></i> Registrarse</button>
         </div>
     </main>
@@ -36,6 +36,5 @@
         <a href="#"><i class="fa-solid fa-user-plus"></i> Unite al equipo</a>
         <a href="#"><i class="fa-solid fa-envelope"></i> Contacto</a>
     </footer>
-    <script src="scripts/sort_table.js"></script>
 </body>
 </html>
